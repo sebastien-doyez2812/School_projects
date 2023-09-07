@@ -1,0 +1,4 @@
+gcc -o retard retard.c
+gcc -o client client_UDP.c
+make
+

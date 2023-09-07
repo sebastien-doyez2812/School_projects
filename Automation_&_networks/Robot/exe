@@ -1,0 +1,4 @@
+gcc -o client client_UDP.c
+gcc -o retard retard.c
+make
+gnome-terminal --tab -e "./control 127.0.0.1" --tab -e "./retard 127.0.0.1" --tab -e "./client 127.0.0.1"
