@@ -1,5 +1,5 @@
 # School_projects
-This repository contains my projects carried out in enginnerring school.
+This repository contains my projects carried out in engineering school.
 
 _ The "Automation_&_networks" project concerns a simulation of sending instructions, delayed by a client-server system, to a robotic arm on Coppeliasim.<br><br>
 _ The "Perception" folder contains reports of work done on Matlab, as well as the tested code.<br><br>
