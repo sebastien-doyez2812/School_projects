@@ -1,0 +1,39 @@
+previous id: 	 id: 	 time missed: 			 Error Teensy:
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 27488.0 us missed.
+
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 5332.0 us missed.
+
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 85180.0 us missed.
+
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 1584.0 us missed.
+
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 3528.0 us missed.
+
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 224.0 us missed.
+
+232574 		 232576 	 321950
+237861 		 237863 	 321790
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 936.0 us missed.
+
+252791 		 252793 	 321665
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 1564.0 us missed.
+
+262499 		 262501 	 321996
+							ERROR TEENSY:	 code 1: There is too much delay between 2 data.	 1232.0 us missed.
+
+272462 		 272464 	 321871
+278896 		 278898 	 322208
+284380 		 284382 	 321908
+290329 		 290331 	 321621
+296208 		 296210 	 322039
+302007 		 302009 	 321517
+308605 		 308607 	 321824
+315204 		 315206 	 321718
+321118 		 321120 	 322329
+327372 		 327374 	 322292
+
+
+ __________________________________________________________________________________________________________________________________________________________________
+
+Total time missed : 4632896.0 us 
+ Total error: 23
