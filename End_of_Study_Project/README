@@ -1,9 +1,10 @@
 This is my Last semestrer project in Polytech Montpellier:
 
 The goal of this project is to permite to the Géoscience Montpellierte team to study micro earthquakes, simulated by a model. 
-This folder contains: _ the python programs for the HMI ("IHM_PFE.py'),
-                      _ a launcher to simplify the use of CoolTerm and the HMI ("launcher.py"
-                      _ the teensy program, to have access to the data from the sensors.
+This folder contains: _ the HMI 's python program for ONE sensor ("IHM_PFE.py') ,
+                      _ the HMI 's python program for the "sensor network (2 sensors for now) ("IHM_snesors_network.py') ,
+                      _ a launcher to simplify the use of CoolTerm and the HMI ("launcher.py")
+                      _ the teensy program, to have access to the data from ONE sensor.
 
 
 The sensors used are IIS3DWB, the datasheet is available here : https://www.st.com/en/mems-and-sensors/iis3dwb.html
