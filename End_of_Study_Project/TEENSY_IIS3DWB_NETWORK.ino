@@ -293,7 +293,6 @@ void loop()
   {
     Serial.print("ERROR SENSOR 1 OFFLINE 0 \t"); // All data at 0!
     
-    delay(100);
     Reset_IIS3DWB(1);
   }
   else if (flag_mem1 == 1 && ((time_sent - memory_data1[2][0]) > (1e6/frequency)+ eps)) 
@@ -301,11 +300,13 @@ void loop()
   // If it is more than 1/ frequency + epsilon, there is an error.
   { 
     Serial.print("ERROR SENSOR 1 OFFLINE 1 \t"); // Too much time!
-    Serial.print(time_sent - memory_data1[2][0]);
+    //Serial.print(time_sent - memory_data1[2][0]);
+    
+    // Reset the memory too... 
+    flag_mem1 = 0;
     Serial.print("\t");
     
     // Reset the sensor:
-    delay(100);
     Reset_IIS3DWB(1);
     memory_data1[2][0] = micros();
   }
@@ -322,7 +323,6 @@ void loop()
   {
     Serial.print("ERROR SENSOR 1 OFFLINE 2\t"); // 4 times the same data
     // Reset the sensor:
-    delay(100);
     Reset_IIS3DWB(1);
     memory_data1[2][0] = micros();
   }
@@ -363,7 +363,6 @@ void loop()
   {
     Serial.println("\t ERROR SENSOR 2 OFFLINE 0 "); // All data at 0!
     
-    delay(100);
     Reset_IIS3DWB(2);
   }
   else if (flag_mem2 == 1 && ((time_sent - memory_data2[2][0]) > (1e6/frequency)+ eps)) 
@@ -375,7 +374,6 @@ void loop()
     Serial.println("\t");
     
     // Reset the sensor:
-    delay(100);
     Reset_IIS3DWB(2);
     
     memory_data2[2][0] = micros();
@@ -395,7 +393,6 @@ void loop()
     Serial.println("ERROR SENSOR 2 OFFLINE 2"); // 4 times the same data
     
     // Reset the sensor:
-    delay(100);
     Reset_IIS3DWB(2);
     
     memory_data2[2][0] = micros();
@@ -480,13 +477,13 @@ void Reset_IIS3DWB(uint8_t id)
     digitalWrite(PIN, LOW);
     IIS3DWB.reset();  // RESET DE L'ACCELEROMETRE
     aRes = IIS3DWB.getAres(Ascale); // CALUL DU LSB
-    delay(100);
+    delay(20);
     IIS3DWB.init(Ascale);
     digitalWrite(PIN, HIGH);
   }
   EcritureByte(IIS3DWB_CTRL1_XL, 0xA0 | AFS_4G << 2, _cs1);
   EcritureByte(IIS3DWB_CTRL3_C, 0x40 | 0x04, _cs1);
-  delay(100);
+  delay(20);
 }
 
 
