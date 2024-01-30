@@ -159,11 +159,11 @@ void setup()
 
       // Calculate how much time we needed for this data since the begining of the experience:
       time_sent = int(b-temps_dep);
-      /*if ((temp[0] == 0) && (temp[1] == 0) && (temp[2] == 0))
+      if ((temp[0] == 0) && (temp[1] == 0) && (temp[2] == 0))
       {
         Serial.print("ERROR SENSOR 1 OFFLINE 0 \n");
-      }*/
-      /*
+      }
+      
       else if ((abs(accelNom[0] * aRes * 1000.0) > 200 &&
     abs(memory_data1[2][1]) < 200                     &&
     abs(memory_data1[1][1]) < 200                     &&
@@ -179,8 +179,8 @@ void setup()
     abs(memory_data1[0][3]) < 200 ))
     ){
       Serial.print("ERROR SENSOR 1 OFFLINE 1 \n");
-    }*/
-    /*  else if ((accelNom[0] * aRes * 1000.0 == memory_data1[2][1] &&
+    }
+      else if ((accelNom[0] * aRes * 1000.0 == memory_data1[2][1] &&
     memory_data1[2][1] == memory_data1[1][1]                  &&
     memory_data1[1][1] == memory_data1[0][1]                  &&
     accelNom[1] * aRes * 1000.0 == memory_data1[2][2]        &&
@@ -192,7 +192,7 @@ void setup()
         Serial.print("ERROR SENSOR 1 OFFLINE 2 \n");
         memory_data1[2][0] = micros();
       } 
-      else{*/
+      else{
         // Write the data into the SD card memory first:
         myFile.print(time_sent);
         myFile.print(" ");
@@ -215,7 +215,7 @@ void setup()
         Serial.print(" ");
         Serial.println(id);
 
-      /*
+      
         // Memory:
         // Keep access to the previous data: 
         for (int i = 0; i <2; i ++){
@@ -229,9 +229,9 @@ void setup()
         memory_data1[2][2] = (accelNom[1]) * aRes * 1000.0;
         memory_data1[2][3] = (accelNom[2]) * aRes * 1000.0;
         memory_data1[2][4] = id;
-*/
+
         delayMicroseconds(100);
-     //}
+     }
     }
   }
   myFile.close();
