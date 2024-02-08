@@ -14,7 +14,7 @@ import ctypes
 # Create variables with paths:
 chemin_courant = r"C:/Users/doyez/OneDrive/Bureau/IHMmicroseismes"
 coolterm_path = chemin_courant + "/CoolTermWin64Bit/CoolTerm.exe"
-ihm_path = chemin_courant +"/IHM_PFE.py"
+ihm_path = chemin_courant +"/IHM_sensors_network.py"
 data_txt_path = chemin_courant +"/data.txt"
 
 # Delete all the data from data.txt
@@ -26,7 +26,7 @@ file.close()
 process1 = subprocess.Popen(coolterm_path)
 
 # Waiting...
-time.sleep(10)
+time.sleep(15)
 
 # Open the data.txt file:
 pyautogui.hotkey('ctrl', 'r')
@@ -46,9 +46,9 @@ time.sleep(0.1)
 print("Start the interface in ...")
 
 # Waiting before opening the HMI
-for i in range(5,0,-1):
+for i in range(3,0,-1):
     print(f"{i}...")
-    time.sleep(1)
+    time.sleep(0.3)
 
 # Open the HMI:
 commande = ['python', ihm_path]

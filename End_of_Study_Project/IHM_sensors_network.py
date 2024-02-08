@@ -20,8 +20,8 @@ import time
 import subprocess
 import numpy as np
 
-refresh_time = 10
-nb_points = 100
+refresh_time = 20
+nb_points = 50
 limit_fixed = [0, 0]
 autoscale = 1
 color_sensor1 = 'c'
@@ -29,7 +29,7 @@ color_sensor2 = 'r'
 color_sensor3 = 'g'
 min_fixed = 0
 max_fixed= 1
-nb_skip_line = 50
+nb_skip_line = 100
 min_auto_plot = -80
 max_auto_plot = 80
 id_sensor_selected = 1
@@ -145,7 +145,8 @@ def read_data_worker():
         with open("data.txt", 'r') as file:
             data_txt = file.readlines()
             last_line_read = len(data_txt) - nb_skip_line * nb_points
-
+            if last_line_read <0 :
+                continue
             # The goal is, for every data, we take 1 data and skip the 99 others
             # This is a way to have data on a bigger time scale. 
             i = last_line_read //nb_skip_line
